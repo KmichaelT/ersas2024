@@ -12,12 +12,14 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
-
+import Image from 'next/image'
+import  Logomark  from '@/images/LogoMark.svg'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
-import { Logo, Logomark } from '@/components/Logo'
+import  Logo  from '@/images/Logo.svg'
+
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
 
@@ -69,16 +71,15 @@ function Header({
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
         >
-          <Logomark
+          <Image
+            src={Logo}
             className="h-8 sm:hidden"
-            invert={invert}
-            filled={logoHovered}
+            height={30} alt={''}        
           />
-          <Logo
+          <Image
+            src={Logomark}
             className="hidden h-8 sm:block"
-            invert={invert}
-            filled={logoHovered}
-          />
+            height={30} alt={''}          />
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="/contact" invert={invert}>

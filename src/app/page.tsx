@@ -9,27 +9,27 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
+import logoBrightPath from '@/images/clients/lia/logo-light.svg'
+import logomeetingline from '@/images/clients/meetingline/logo-light.svg'
+import logoadam from '@/images/clients/adam/logo-light.svg'
+import logogoogoot from '@/images/clients/googoot/logo-light.svg'
+import logocapital from '@/images/clients/capital/logo-light.svg'
+import logorea from '@/images/clients/rea/logo-light.svg'
+import logorctDark from '@/images/clients/rct/logo-dark.svg'
+import logorctLight from '@/images/clients/rct/logo-light.svg'
+import logoatdoor from '@/images/clients/atdoor/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
-  ['Phobia', logoPhobiaLight],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
+  ['rct', logorctLight],
+  ['meetingline', logomeetingline],
+  ['atdoor', logoatdoor],
+  ['capital', logocapital],
+  ['googoot', logogoogoot],
+  ['adam', logoadam],
   ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['rea', logorea],
 ]
 
 function Clients() {
@@ -38,7 +38,7 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+          We Have Had the Pleasure of Working with 
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -48,7 +48,7 @@ function Clients() {
             className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
           >
             {clients.map(([client, logo]) => (
-              <li key={client}>
+              <li key={client} className="h-100">
                 <FadeIn>
                   <Image src={logo} alt={client} unoptimized />
                 </FadeIn>
@@ -124,16 +124,16 @@ function CaseStudies({
 function Services() {
   return (
     <>
-      <SectionIntro
+<SectionIntro
         eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        title="Elevating Your Business with Tailored Digital Solutions."
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+          Our expertise lies in transforming your vision into reality through high-end design and innovative software solutions, driving growth for small to medium-sized enterprises.
         </p>
-      </SectionIntro>
+</SectionIntro>
+
       <Container className="mt-16">
         <div className="lg:flex lg:items-center lg:justify-end">
           <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
@@ -146,24 +146,17 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+            <ListItem title="Branding">
+            We craft compelling brand identities that resonate with your audience, elevating your market presence and fostering brand loyalty.
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="Web and App Development">
+            Our bespoke web and app solutions are engineered for performance, delivering seamless, intuitive digital experiences that drive engagement.
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
+            <ListItem title="UX/UI Design">
+            Focused on user-centric design, we ensure every touchpoint is intuitive, engaging, and efficient, enhancing user satisfaction and conversion rates.
             </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title=" E-Commerce Solutions">
+            Tailored e-commerce platforms that blend top-notch design with robust functionality, optimizing your online sales and customer experience.
             </ListItem>
           </List>
         </div>
@@ -172,9 +165,17 @@ function Services() {
   )
 }
 
+
+
+
+
+
+
+
+
 export const metadata: Metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'We are a development ersas working at the intersection of design and technology.',
 }
 
 export default async function Home() {
@@ -185,12 +186,10 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Award-winning development studio based in Denmark.
+          Elevating Businesses with Premier Design & Tech.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It’s a really busy intersection though — a lot of
-            our staff have been involved in hit and runs.
+          Driving small and medium enterprises forward with bespoke design and cutting-edge software solutions.
           </p>
         </FadeIn>
       </Container>
@@ -201,9 +200,9 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
+        client={{ name: 'rct', logo: logorctDark }}
       >
-        The team at Studio went above and beyond with our onboarding, even
+        The team at ersas went above and beyond with our onboarding, even
         finding a way to access the user’s microphone without triggering one of
         those annoying permission dialogs.
       </Testimonial>

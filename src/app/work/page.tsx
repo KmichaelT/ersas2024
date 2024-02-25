@@ -10,14 +10,14 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
-import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
-import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
+import logoBrightPath from '@/images/clients/lia/logo-dark.svg'
+import logomeetingline from '@/images/clients/meetingline/logo-dark.svg'
+import logoadam from '@/images/clients/adam/logo-dark.svg'
+import logogoogoot from '@/images/clients/googoot/logo-dark.svg'
+import logocapital from '@/images/clients/capital/logo-dark.svg'
+import logorea from '@/images/clients/rea/logo-dark.svg'
+import logorct from '@/images/clients/rct/logo-dark.svg'
+import logoatdoor from '@/images/clients/atdoor/logo-dark.svg'
 import { formatDate } from '@/lib/formatDate'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
@@ -97,14 +97,14 @@ function CaseStudies({
 }
 
 const clients = [
-  ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
+  ['rct', logorct],
+  ['meetingline', logomeetingline],
+  ['atdoor', logoatdoor],
+  ['capital', logocapital],
+  ['googoot', logogoogoot],
+  ['adam', logoadam],
   ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['rea', logorea],
 ]
 
 function Clients() {
@@ -162,9 +162,9 @@ export default async function Work() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
+        client={{ name: 'capital', logo: logocapital }}
       >
-        We approached <em>Studio</em> because we loved their past work. They
+        We approached <em>ersas</em> because we loved their past work. They
         delivered something remarkably similar in record time.
       </Testimonial>
 
