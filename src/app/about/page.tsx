@@ -10,23 +10,23 @@ import { PageIntro } from '@/components/PageIntro'
 import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StatList, StatListItem } from '@/components/StatList'
-import imageAngelaFisher from '@/images/team/angela-fisher.jpg'
-import imageBenjaminRussel from '@/images/team/benjamin-russel.jpg'
-import imageBlakeReid from '@/images/team/blake-reid.jpg'
-import imageChelseaHagon from '@/images/team/chelsea-hagon.jpg'
-import imageDriesVincent from '@/images/team/dries-vincent.jpg'
-import imageEmmaDorsey from '@/images/team/emma-dorsey.jpg'
-import imageJeffreyWebb from '@/images/team/jeffrey-webb.jpg'
-import imageKathrynMurphy from '@/images/team/kathryn-murphy.jpg'
-import imageLeonardKrasner from '@/images/team/leonard-krasner.jpg'
-import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
-import imageMichaelFoster from '@/images/team/michael-foster.jpg'
-import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
+import imageAngelaFisher from '@/images/team/Developer_1.jpg'
+import imageBenjaminRussel from '@/images/team/Developer_2.jpg'
+import imageBlakeReid from '@/images/team/Front-end_developer.jpg'
+import imageChelseaHagon from '@/images/team/Graphic designer.png'
+import imageDriesVincent from '@/images/team/Project manager.jpg'
+import imageEmmaDorsey from '@/images/team/UI_designer.jpg'
+import imageMike from '@/images/team/mike.png'
+import imageLeul from '@/images/team/leul.png'
+import imageMiki from '@/images/team/miki.png'
+// import imageLeslieAlexander from '@/images/team/leslie-alexander.jpg'
+// import imageMichaelFoster from '@/images/team/michael-foster.jpg'
+// import imageWhitneyFrancis from '@/images/team/whitney-francis.jpg'
 import { loadArticles } from '@/lib/mdx'
 
 function Culture() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
+    <div className="mt-24   bg-neutral-950 py-24 sm:mt-32 lg:mt-40 lg:py-32">
       <SectionIntro
         eyebrow="Our culture"
         title="Balance your passion with your passion for life."
@@ -61,19 +61,19 @@ const team = [
     title: 'Leadership',
     people: [
       {
-        name: 'Leslie Alexander',
-        role: 'Co-Founder / CEO',
-        image: { src: imageLeslieAlexander },
+        name: 'Michael Bekele',
+        role: 'CEO & Lead Designer',
+        image: { src: imageMike },
       },
       {
-        name: 'Michael Foster',
-        role: 'Co-Founder / CTO',
-        image: { src: imageMichaelFoster },
+        name: 'Mikias Teshome',
+        role: 'CTO & Lead Developer',
+        image: { src: imageMiki },
       },
       {
         name: 'Dries Vincent',
-        role: 'Partner & Business Relations',
-        image: { src: imageDriesVincent },
+        role: 'COO & Marketing Lead',
+        image: { src: imageLeul },
       },
     ],
   },
@@ -90,31 +90,36 @@ const team = [
         role: 'Senior Designer',
         image: { src: imageEmmaDorsey },
       },
-      {
-        name: 'Leonard Krasner',
-        role: 'VP, User Experience',
-        image: { src: imageLeonardKrasner },
-      },
+      // {
+      //   name: 'Leonard Krasner',
+      //   role: 'VP, User Experience',
+      //   image: { src: imageLeonardKrasner },
+      // },
       {
         name: 'Blake Reid',
         role: 'Junior Copywriter',
         image: { src: imageBlakeReid },
       },
       {
-        name: 'Kathryn Murphy',
-        role: 'VP, Human Resources',
-        image: { src: imageKathrynMurphy },
+        name: 'Dries Vincent',
+        role: 'Partner & Business Relations',
+        image: { src: imageDriesVincent },
       },
-      {
-        name: 'Whitney Francis',
-        role: 'Content Specialist',
-        image: { src: imageWhitneyFrancis },
-      },
-      {
-        name: 'Jeffrey Webb',
-        role: 'Account Coordinator',
-        image: { src: imageJeffreyWebb },
-      },
+      // {
+      //   name: 'Kathryn Murphy',
+      //   role: 'VP, Human Resources',
+      //   image: { src: imageKathrynMurphy },
+      // },
+      // {
+      //   name: 'Whitney Francis',
+      //   role: 'Content Specialist',
+      //   image: { src: imageWhitneyFrancis },
+      // },
+      // {
+      //   name: 'Jeffrey Webb',
+      //   role: 'Account Coordinator',
+      //   image: { src: imageJeffreyWebb },
+      // },
       {
         name: 'Benjamin Russel',
         role: 'Senior Developer',

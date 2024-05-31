@@ -11,9 +11,9 @@ const navigation = [
   {
     title: 'Work',
     links: [
-      { title: 'meetingline', href: '/work/meetingline' },
-      { title: 'atdoor', href: '/work/atdoor' },
-      { title: 'rct', href: '/work/rct' },
+      { title: 'Bolttek', href: '/work/Bolttek' },
+      { title: 'Love In Action', href: '/work/Lia' },
+      { title: 'REA', href: '/work/REA' },
       {
         title: (
           <>

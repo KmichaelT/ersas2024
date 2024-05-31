@@ -13,12 +13,12 @@ import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 import Image from 'next/image'
-import  Logomark  from '@/images/LogoMark.svg'
+import { Logo, Logomark } from '@/components/Logo'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
-import  Logo  from '@/images/Logo.svg'
+
 
 import { Offices } from '@/components/Offices'
 import { SocialMedia } from '@/components/SocialMedia'
@@ -71,15 +71,16 @@ function Header({
           onMouseEnter={() => setLogoHovered(true)}
           onMouseLeave={() => setLogoHovered(false)}
         >
-          <Image
-            src={Logo}
+          <Logomark
             className="h-8 sm:hidden"
-            height={30} alt={''}        
+            invert={invert}
+            filled={logoHovered}
           />
-          <Image
-            src={Logomark}
+          <Logo
             className="hidden h-8 sm:block"
-            height={30} alt={''}          />
+            invert={invert}
+            filled={logoHovered}
+          />
         </Link>
         <div className="flex items-center gap-x-8">
           <Button href="/contact" invert={invert}>
@@ -256,18 +257,18 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
 
       <motion.div
         layout
-        style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
+        // style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
         className="relative flex flex-auto overflow-hidden bg-white pt-14"
       >
         <motion.div
           layout
           className="relative isolate flex w-full flex-col pt-9"
         >
-          <GridPattern
+          {/* <GridPattern
             className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
             yOffset={-96}
             interactive
-          />
+          /> */}
 
           <main className="w-full flex-auto">{children}</main>
 

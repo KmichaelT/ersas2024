@@ -14,9 +14,9 @@ import logomeetingline from '@/images/clients/meetingline/logo-light.svg'
 import logoadam from '@/images/clients/adam/logo-light.svg'
 import logogoogoot from '@/images/clients/googoot/logo-light.svg'
 import logocapital from '@/images/clients/capital/logo-light.svg'
-import logorea from '@/images/clients/rea/logo-light.svg'
-import logorctDark from '@/images/clients/rct/logo-dark.svg'
-import logorctLight from '@/images/clients/rct/logo-light.svg'
+import logorea from '@/images/clients/REA/logo-light.svg'
+import logorctDark from '@/images/clients/RCT/logo-dark.svg'
+import logorctLight from '@/images/clients/RCT/logo-light.svg'
 import logoatdoor from '@/images/clients/atdoor/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
@@ -28,13 +28,12 @@ const clients = [
   ['capital', logocapital],
   ['googoot', logogoogoot],
   ['adam', logoadam],
-  ['Bright Path', logoBrightPath],
   ['rea', logorea],
 ]
 
 function Clients() {
   return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+    <div className="mt-24   bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
