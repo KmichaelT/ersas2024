@@ -1,6 +1,6 @@
 import logo from '@/images/clients/adam/logomark-dark.svg'
 import imageHero from './Adam_Academy.png'
-import imageMark from './mark.jpg'
+import imageQuote from '@/images/quote.svg'
 
 export const caseStudy = {
   client: 'Adam Academy',
@@ -16,9 +16,12 @@ export const caseStudy = {
   date: '2023-06',
   service: 'Branding',
   testimonial: {
-    author: { name: 'John Doe', role: 'Founder of Adam Academy' },
+    author: { name: 'Dr Adam Tulu', role: 'Founder of Adam Academy' },
     content:
-      'The team at Ersas delivered exceptional branding solutions that truly captured the essence of our mission. Their expertise in design and strategic approach significantly enhanced our academy’s presence.',
+  'Ersas crafted a cohesive brand identity for Adam Academy that beautifully reflects our commitment to quality education integrated with conservative values. ' +
+  'Their design and branding services have elevated our school\'s image, making our mission clear and resonant with our community. ' +
+  'We are thrilled with the results and the enhanced connection with our audience.'
+
   },
 }
 
@@ -43,9 +46,10 @@ Our collaboration with Adam Academy has been a transformative journey. We infuse
 
 <Blockquote
   author={{ name: 'John Doe', role: 'Founder of Adam Academy' }}
-  image={{ src: imageMark }}
+  image={{ src: imageQuote }}
 >
-  The team at Ersas delivered exceptional branding solutions that truly captured the essence of our mission. Their expertise in design and strategic approach significantly enhanced our academy’s presence.
+  
+  'Ersas crafted a cohesive brand identity for Adam Academy that beautifully reflects our commitment to quality education integrated with conservative values. Their design and branding services have elevated our school\'s image, making our mission clear and resonant with our community. We are thrilled with the results and the enhanced connection with our audience.'
 </Blockquote>
 
 <StatList>

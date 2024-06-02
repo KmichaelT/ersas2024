@@ -235,12 +235,23 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
                 <div className="grid grid-cols-1 gap-y-10 pb-16 pt-10 sm:grid-cols-2 sm:pt-16">
                   <div>
                     <h2 className="font-display text-base font-semibold text-white">
-                      Our offices
+                      Our contacts
                     </h2>
-                    <Offices
-                      invert
-                      className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2"
-                    />
+                    <dl className="mt-6 grid grid-cols-1 invert gap-8 text-sm sm:grid-cols-2">
+  {[
+    ['E-mail us', 'mailto:contact@ersas.co', 'contact@ersas.co'],
+    ['Call us', 'tel:+19723718483', '+1 972 371 8483'],
+  ].map(([label, href, display]) => (
+    <div key={href}>
+      <dt className="font-semibold text-neutral-950">{label}</dt>
+      <dd>
+        <Link href={href} className="text-neutral-600 hover:text-neutral-950">
+          {display}
+        </Link>
+      </dd>
+    </div>
+  ))}
+</dl>
                   </div>
                   <div className="sm:border-l sm:border-transparent sm:pl-16">
                     <h2 className="font-display text-base font-semibold text-white">
