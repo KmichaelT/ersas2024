@@ -176,7 +176,7 @@ export default async function About() {
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Ersas was founded by a group of talented youth who recognized the need for high-quality, cost-effective design and development solutions for small and medium-sized enterprises. From the outset, we have been dedicated to delivering exceptional value by focusing on our clients' unique needs.
+            Ersas was founded by a group of talented youth who recognized the need for high-quality, cost-effective design and development solutions for small and medium-sized enterprises. From the outset, we have been dedicated to delivering exceptional value by focusing on our clients&apos; unique needs.
           </p>
           <p>
             At Ersas, we consider ourselves more than just colleagues; we are a family. Our collaborative culture ensures that every team member is supported and empowered to bring their best to work. We believe in balancing professional dedication with personal well-being, ensuring our team remains passionate and driven.
