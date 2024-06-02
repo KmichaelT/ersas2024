@@ -2,53 +2,53 @@
 
 import { useId, useState } from 'react';
 import { FadeIn } from '@/components/FadeIn';
-import { Button } from '@/components/Button'
+import { Button } from '@/components/Button';
 
 function RadioInput({
-    label,
-    ...props
-  }: React.ComponentPropsWithoutRef<'input'> & { label: string }) {
-    return (
-      <label className="flex gap-x-3">
-        <input
-          type="radio"
-          {...props}
-          className="h-6 w-6 flex-none appearance-none rounded-full border border-neutral-950/20 outline-none checked:border-[0.5rem] checked:border-neutral-950 focus-visible:ring-1 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
-        />
-        <span className="text-base/6 text-neutral-950">{label}</span>
-      </label>
-    )
-  }
+  label,
+  ...props
+}: React.ComponentPropsWithoutRef<'input'> & { label: string }) {
+  return (
+    <label className="flex gap-x-3">
+      <input
+        type="radio"
+        {...props}
+        className="h-6 w-6 flex-none appearance-none rounded-full border border-neutral-950/20 outline-none checked:border-[0.5rem] checked:border-neutral-950 focus-visible:ring-1 focus-visible:ring-neutral-950 focus-visible:ring-offset-2"
+      />
+      <span className="text-base/6 text-neutral-950">{label}</span>
+    </label>
+  );
+}
 
-  function TextInput({
-    label,
-    ...props
-  }: React.ComponentPropsWithoutRef<'input'> & { label: string }) {
-    let id = useId()
-  
-    return (
-      <div className="group relative z-0 transition-all focus-within:z-10">
-        <input
-          type="text"
-          id={id}
-          {...props}
-          placeholder=" "
-          className="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
-        />
-        <label
-          htmlFor={id}
-          className="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
-        >
-          {label}
-        </label>
-      </div>
-    )
-  }
+function TextInput({
+  label,
+  ...props
+}: React.ComponentPropsWithoutRef<'input'> & { label: string }) {
+  let id = useId();
+
+  return (
+    <div className="group relative z-0 transition-all focus-within:z-10">
+      <input
+        type="text"
+        id={id}
+        {...props}
+        placeholder=" "
+        className="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+      />
+      <label
+        htmlFor={id}
+        className="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
+      >
+        {label}
+      </label>
+    </div>
+  );
+}
 
 function ContactForm() {
   const [formStatus, setFormStatus] = useState("");
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -58,12 +58,12 @@ function ContactForm() {
       },
       body: JSON.stringify({
         access_key: "77ca70ea-3325-4e5a-9cb7-f09ad60543da",
-        name: e.target.name.value,
-        email: e.target.email.value,
-        message: e.target.message.value,
-        company: e.target.company.value,
-        phone: e.target.phone.value,
-        budget: e.target.budget.value,
+        name: e.currentTarget.name.value,
+        email: e.currentTarget.email.value,
+        message: e.currentTarget.message.value,
+        company: e.currentTarget.company.value,
+        phone: e.currentTarget.phone.value,
+        budget: e.currentTarget.budget.value,
       }),
     });
     const result = await response.json();
