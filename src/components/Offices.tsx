@@ -16,7 +16,7 @@ function Office({
         invert ? 'text-neutral-300' : 'text-neutral-600',
       )}
     >
-      <strong className={invert ? 'text-white' : 'text-neutral-950'}>
+      <strong className={invert ? 'text-white' : 'text-cyan-950'}>
         {name}
       </strong>
       <br />

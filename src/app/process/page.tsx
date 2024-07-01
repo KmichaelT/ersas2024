@@ -39,10 +39,10 @@ function Section({
         <div className="mt-12 lg:mt-0 lg:w-[37rem] lg:flex-none lg:group-even/section:order-first">
           <FadeIn>
             <div
-              className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-neutral-950 after:content-[counter(section,decimal-leading-zero)]"
+              className="font-display text-base font-semibold before:text-neutral-300 before:content-['/_'] after:text-cyan-950 after:content-[counter(section,decimal-leading-zero)]"
               aria-hidden="true"
             />
-            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-neutral-950 sm:text-4xl">
+            <h2 className="mt-2 font-display text-3xl font-medium tracking-tight text-cyan-950 sm:text-4xl">
               {title}
             </h2>
             <div className="mt-6">{children}</div>
@@ -68,7 +68,7 @@ function Discover() {
         </p>
       </div>
 
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+      <h3 className="mt-12 font-display text-base font-semibold text-cyan-950">
         Included in this phase
       </h3>
       <TagList className="mt-4">
@@ -122,7 +122,7 @@ function Deliver() {
         </p>
       </div>
 
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+      <h3 className="mt-12 font-display text-base font-semibold text-cyan-950">
         Included in this phase
       </h3>
       <List className="mt-8">
